@@ -15,14 +15,10 @@ import errorHandler from "./src/utils/errorHandler.js";
 dotenv.config();
 const app = express();
 
-// Get the directory name
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
 // Middleware
 app.use(
   cors({
-    origin: "http://localhost:5173", // Vite's default port
+    origin: "http://localhost:5173" || process.env.CLIENT_URI, // Vite's default port
     credentials: true,
   })
 );
