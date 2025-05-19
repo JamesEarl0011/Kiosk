@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:5000/api";
+const API_URL = "https://kiosk-1ybi.onrender.com/api";
 
 // Add this helper function
 const getToken = () => {
